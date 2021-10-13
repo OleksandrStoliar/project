@@ -1,5 +1,30 @@
-const test = 12.5;
+"use strict";
 
-//console.log(parseInt(test));
-console.log(parseFloat(test));
-console.log(typeof(parseInt(test)));
+/* let str = "some";
+let strObj = new String(str);
+
+console.log(typeof(str));
+console.log(typeof(strObj)); */
+
+//console.dir([1,2,3,]);
+
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function() {
+        console.log("Hello");
+    }
+};
+
+//const john = Object.create(soldier);
+
+const john = {
+    health: 100
+};
+
+//jonh.__proto__ = soldier;
+
+Object.setPrototypeOf(john, soldier);
+
+console.log(john.armor);
+john.sayHello();
